@@ -1,0 +1,25 @@
+.main {
+  width: 90%;
+  height: auto;
+  min-height: 100%;
+  margin: auto;
+}
+.darkmode {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%) !important;
+}
+.darkmode .mode button {
+  color: hsl(0, 0%, 100%) !important;
+}
+.lightmode {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
+.lightmode > p {
+  color: hsl(0, 0%, 52%);
+}
+@media only screen and (max-width: 650px) {
+  .main {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="content">
+    <button routerLink="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</button>
+    <div class="details" *ngFor="let country of countryObject">
+        <div class="flag">
+        <img src="{{country.flag}}" alt="{{country.name}}"/>
+        </div>
+        <div class="description">
+            <h2>{{country.name}}</h2>
+            <div class="desc">
+                <div class="col-1">
+                    <p><span class="title">Native Name: </span>{{country.nativeName}}</p>
+                    <p><span class="title">Population: </span>{{country.population}}</p>
+                    <p><span class="title">Region: </span>{{country.region}}</p>
+                    <p><span class="title">Sub Region: </span>{{country.subregion}}</p>
+                    <p><span class="title">Capital: </span>{{country.capital}}</p>
+                </div>
+                <div class="col-2">
+                    <p><span class="title">Top Level Domain: </span>{{country.topLevelDomain}}</p>
+                    <p><span class="title">Currencies: </span><span *ngFor="let currency of country.currencies">{{currency.name}}, </span></p>
+                    <p><span class="title">Languages: </span><span  *ngFor="let language of country.languages">{{language.name}}, </span></p>
+                </div>
+            </div>
+            <div class="desc-last">
+                <p><span class="title">Border Countries: </span><span  *ngFor="let borderCountry of country.borders">{{borderCountry}}, </span></p>
+            </div>
+        </div>
+    </div>
+</div>
+ 

@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    padding: 1% 5%;
+}
+.heading, .mode{
+    display:flex;
+    flex-direction: row;
+}
+.heading{
+    width:100%;
+}
+.mode{
+    width: 105px;
+}
+.mode button{
+    background-color: transparent;
+    cursor: pointer;
+    border:0;
+}
+.darkmode > .mode button{
+    color: hsl(0, 0%, 100%)!important;
+}
+.darkmode > .mode button:focus, .lightmode > .mode button:focus{
+    border:0;
+    outline: transparent;
+}
+.fa-moon-o{
+    padding-right:5px;
+}

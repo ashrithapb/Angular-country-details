@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { HomeServiceService } from './home-service.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'project06';
+  mode:string = 'darkmode';
+
+  constructor(private _service:HomeServiceService){}
+  ngOnInit(): void{
+    this._service.modeShare.subscribe(x => { 
+      this.mode = x;
+    });
+  }
 }

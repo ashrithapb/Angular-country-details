@@ -1,0 +1,39 @@
+.filterbar{
+    display:flex;
+    padding: 1% 5%;
+}
+.search, select{
+    display:flex;
+    flex-direction: row;
+}
+.search{
+    width:100%;
+}
+select, select option{
+    border: 0;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+.fa{
+    padding-right:5px;
+}
+#search, #search:focus{
+    border:0 !important;
+    padding:5px;
+    background-color: transparent;
+} 
+.search-box{
+    border:1px solid transparent;
+    border-radius: 3px;
+    padding:5px 20px;
+    background-color: white;
+}
+@media only screen and (max-width: 650px) {
+    .filterbar{
+        display:block;
+        margin: 15px 0;
+    }
+    .search{
+        margin: 15px 0;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="filterbar">
+    <div class="search">
+        <div class="search-box" >
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" id="search" [(ngModel)]="seachCountry" (keyup)="searchCountry()" placeholder="search for a country" />
+        </div>
+    </div>
+    
+    <select (change)="regionChanged($event.target.value)">
+        <option value="">Filter by Region</option>
+        <option *ngFor = "let region of regions" [value]="region">
+            <span *ngIf="region !='' || region !=null">{{region}}</span>
+        </option>     
+    </select>
+</div>
